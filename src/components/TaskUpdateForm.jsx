@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { useEffect } from "react";
 
-import { useHistory, useParams } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import { getIndividualTask, updateTask } from "../functions/taskcrud";
 import TaskForm from "./TaskForm";
 
@@ -53,6 +53,9 @@ const TaskUpdateForm = ({ match }) => {
             desc={desc}
             setDesc={setDesc}
           />
+          <Link to="/" className="btn btn-success mt-3">
+            Go Back
+          </Link>
         </div>
       </div>
     </div>
